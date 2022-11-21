@@ -32,7 +32,7 @@
     <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
+            <a href="index.php" class="navbar-brand p-0">
                 <h1 class="m-0">Modernet Soft</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -50,9 +50,9 @@
                             <a href="detail.html" class="dropdown-item">Blog Detail</a>
                         </div>
                     </div> -->
-                    <a href="/potfolio.php" class="nav-item nav-link">Realisations</a>
-                    <a href="/price.php" class="nav-item nav-link">Pricing</a>
-                    <a href="/team.php" class="nav-item nav-link">Equipes</a>
+                    <a href="/potfolio.php" class="nav-item nav-link">Réalisations</a>
+                    <a href="/price.php" class="nav-item nav-link">Devis</a>
+                    <a href="/team.php" class="nav-item nav-link">Équipe</a>
                     
                     <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
