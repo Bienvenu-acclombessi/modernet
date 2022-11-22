@@ -11,7 +11,7 @@
                         <p class="mt-3 mb-4">Lorem diam sit erat dolor elitr et, diam lorem justo amet clita stet eos sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam amet erat lorem stet eos. Diam amet et kasd eos duo.</p>
                         <form action="">
                             <div class="input-group">
-                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                <input type="text" class="form-control border-white p-3" placeholder="Votre Email">
                                 <button class="btn btn-dark">S'abonner</button>
                             </div>
                         </form>
@@ -21,7 +21,7 @@
                     <div class="row gx-5">
                         <div class="col-lg-4 col-md-12 pt-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Get In Touch</h3>
+                                <h3 class="text-light mb-0">Contacts</h3>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
