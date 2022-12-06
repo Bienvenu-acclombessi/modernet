@@ -32,7 +32,7 @@ if(isset($_POST['valid'])){
     <title><?=$blog['title'] ?> | Modernet Soft</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="<?=$blog['title'] ?>" name="keywords">
-    <meta content="<?=$blog['description'] ?>" name="description">
+    <meta content="" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -87,9 +87,9 @@ if(isset($_POST['valid'])){
                     <div class="mb-5">
                         <img class="img-fluid w-100 rounded mb-5" src="admin/images/<?=$blog['image_descriptive'] ?>" alt="">
                         <h1 class="mb-4"><?=$blog['title'] ?></h1>
-                        <p class="text-justify" style="text-align: justify; text-justify:inter-word"  >
+                        <div class="text-justify" style="text-align: justify; text-justify:inter-word ;word-wrap: break-word; overflow:hidden  "  >
                         <?=$blog['description'] ?>
-                        </p>
+</div>
                     </div>
                     <!-- Blog Detail End -->
     

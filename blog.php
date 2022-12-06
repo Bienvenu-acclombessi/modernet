@@ -97,7 +97,6 @@ require('admin/database.php');
                                         <small><i class="far fa-calendar-alt text-primary me-2"></i><?=$blog['createdAt']  ?></small>
                                     </div>
                                     <h4 class="mb-3"><?=$blog['title']  ?></h4>
-                                    <p><?php echo substr($blog['description'],0,50);  ?> </p>
                                     <a class="text-uppercase" href="blog-detail.php?id_blog=<?=$blog['id_blog']  ?>">Read More <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>

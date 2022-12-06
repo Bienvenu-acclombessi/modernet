@@ -24,6 +24,8 @@ if(isset($_POST['valid'])){
           } else {
             $error = "Veuillez choisir un fichier";
           }
+    }else{
+    $error = "Veuillez remplir tous les champs";
     }
 }
 
@@ -43,6 +45,8 @@ if(isset($_POST['valid'])){
     <link rel="stylesheet" href="css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
+      <link rel="stylesheet" href="summernote/dist/summernote.css">
+    
   </head>
   <body>
     
@@ -86,16 +90,16 @@ if(isset($success)){
     <?php
 }                ?>
                    <h4 class="card-title">Nouveau blog</h4>
-                  <form class="forms-sample" action="" method="POST" enctype="multipart/form-data">
+                  <form class="forms-sample" id="form_blog"  action="" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                       <label for="exampleInputUsername1">Titre du blog(h1) </label>
-                      <input type="text" class="form-control" name="title" id="exampleInputUsername1" placeholder="Titre du blog">
+                      <input type="text" required class="form-control" name="title" id="exampleInputUsername1" placeholder="Titre du blog">
                     </div>
                     <div class="form-group">
                       <label>Image descriptive</label>
                       <input type="file" name="image" class="file-upload-default">
                       <div class="input-group col-xs-12">
-                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                        <input type="text" required class="form-control file-upload-info" disabled placeholder="Upload Image">
                         <span class="input-group-append">
                           <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
                         </span>
@@ -103,7 +107,12 @@ if(isset($success)){
                     </div>
                     <div class="form-group">
                       <label for="exampleTextarea1">Corps de votre rédaction</label>
-                      <textarea class="form-control" id="exampleTextarea1" name="description" rows="4"></textarea>
+                       <div class="summernote">
+
+                       </div>  
+                    </div>
+                    <div class="form-group">
+                     <textarea  class="d-none form-control" id="exampleTextarea1" name="description" rows="4"></textarea>
                     </div>
                     <button type="submit" name="valid" class="btn btn-primary mr-2">Soumettre</button>
                   </form>
@@ -130,5 +139,19 @@ if(isset($success)){
     <script src="vendors/chart.js/Chart.min.js"></script>
     <script src="js/dashboard.js"></script>
     <script src="js/file-upload.js"></script>
+     <script>
+       $("#form_blog").submit(
+        function (event) {
+            var html = $('.summernote').summernote('code');
+            if(html!=""){
+              $('textarea').html(html);
+            }
+           
+          }
+    );
+     </script>
+    <script src="summernote/dist/summernote.min.js"></script>
+    <script src="summernote/dist/summernote-init.js"></script>
+  
   </body>
 </html>
