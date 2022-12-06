@@ -41,7 +41,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
             <a href="/index.php" class="nav-item nav-link">Accueil</a>
-                  >
+                  
                     <a href="/service.php" class="nav-item nav-link">Services</a>
                     <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
