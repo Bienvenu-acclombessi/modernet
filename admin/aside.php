@@ -7,8 +7,7 @@
                 <span class="sidebar-status-indicator"></span>
               </div>
               <div class="sidebar-profile-name">
-                <p class="sidebar-name">
-                  Bienvenu Dev
+                <p class="sidebar-name"><?=$user_nav['username']  ?>
                 </p>
                 <p class="sidebar-designation">
                   Welcome
@@ -19,7 +18,7 @@
             <p class="sidebar-menu-title">Dash menu</p>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="index.php">
               <i class="typcn typcn-device-desktop menu-icon"></i>
               <span class="menu-title">Dashboard <span class="badge badge-primary ml-3">New</span></span>
             </a>
@@ -32,10 +31,16 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Nouveau blog</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Nos blogs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="new-blog.php">Nouveau blog</a></li>
+                <li class="nav-item"> <a class="nav-link" href="blog.php">Nos blogs</a></li>
               </ul>
             </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admins.php">
+              <i class="typcn typcn-device-desktop menu-icon"></i>
+              <span class="menu-title">Admin</span>
+            </a>
           </li>
           
           </ul>

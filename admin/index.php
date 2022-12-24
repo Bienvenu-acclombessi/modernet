@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+require('security.php');
+require('database.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

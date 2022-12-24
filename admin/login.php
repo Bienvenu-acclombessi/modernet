@@ -3,7 +3,18 @@ session_start();
 require('database.php');
 if(isset($_POST['valid'])){
   if(isset($_POST['email'],$_POST['password']) AND !empty(trim($_POST['email'])) AND !empty(trim($_POST['password'])) ){
-
+      $users=$db->prepare('SELECT * FROM admins WHERE username=? AND motdepasse=?');
+    $users->execute(array($_POST['email'],sha1($_POST['password'])));
+    $vusers = $users->rowCount();
+    if($vusers>0){
+      $user=$users->fetch();
+      $_SESSION['id_admin'] = $user['id_admin'];
+      header('location: index.php');
+    }else{
+      $error = 'User not found';
+    }
+  }else{
+    $error = 'Veuillez remplir tous les champs';
   }
 }
 ?>
@@ -35,10 +46,20 @@ if(isset($_POST['valid'])){
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
               <div class="brand-logo">
-                <img src="images/logo.svg" alt="logo">
+                Modernet soft
               </div>
               <h4>Hello! let's get started</h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
+              <?php
+if(isset($error)){
+    ?>
+    <div class="alert alert-danger">
+         <p class="text-center">
+            <?=$error?>
+         </p>
+    </div>
+    <?php
+}                ?>
               <form class="pt-3" action="" method="post">
                 <div class="form-group">
                   <input type="email" name="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">

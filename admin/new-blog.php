@@ -1,5 +1,6 @@
 <?php
 session_start();
+require('security.php');
 require('database.php');
 if(isset($_POST['valid'])){
     if(isset($_POST['title'],$_POST['description']) AND !empty(trim($_POST['title'])) AND !empty(trim($_POST['description']))){

@@ -12,7 +12,7 @@
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
                     <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Abomey calavi</small>
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+22994513830</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>modernetsoft@gmail.com</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>contact@modernetsoft.com</small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">

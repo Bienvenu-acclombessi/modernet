@@ -1,3 +1,61 @@
+<?php
+if(isset($_POST['valid'])){
+    if(isset($_POST['nom'],$_POST['email'],$_POST['service'],$_POST['message'])AND !empty(trim($_POST['nom'])) AND !empty(trim($_POST['email']))  AND !empty(trim($_POST['service'])) AND !empty(trim($_POST['message'])) ){
+        $nom = htmlspecialchars($_POST['nom']);
+        $email = htmlspecialchars($_POST['email']);
+        $service = htmlspecialchars($_POST['service']);
+        $message = htmlspecialchars($_POST['message']);
+        ini_set('display_errors', 1);
+        error_reporting(E_ALL);
+        $from = "contact@modernetsoft.com";
+        $to = $_POST['email'];
+        $header = "MIME-Version: 1.0\r\n";
+        $header .= 'From:"Modernet soft"<contact@modernetsoft.com>' . "\n";
+        $header .= 'Content-Type:text/html; charset="utf-8"' . "\n";
+        $header .= 'Content-Transfer-Encoding: 8bit';
+        $subject = "[Modernet Soft ] Devis";
+        $message = '
+<html>
+  <body>
+      <div>
+      <h3>Nom</h3>
+      <p>'.$nom.'</p>
+      </div>
+      
+      <div>
+      <h3>Email</h3>
+      <p>'.$email.'</p>
+      </div>
+      
+      <div>
+      <h3>service</h3>
+      <p>'.$service.'</p>
+      </div>
+      
+      <div>
+      <h3>Message</h3>
+      <p>'.$message.'</p>
+      </div>
+      <div>
+       <h3>Modernet soft</h3>
+          <p>
+          Pour une generation numerique nouvelle
+          </p>
+      </div>
+  </body>
+</html>
+';
+       
+        mail($to, $subject, $message, $header);
+        
+            $to = "bienvenuacclombessi8@gmail.com";
+            mail($to, $subject, $message, $header);
+                $success = "Message envoyé avec success  ";
+    }else{
+        $error = "Veuillez remplir tous les champs";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -146,22 +204,22 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Appelez-nous</h5>
-                            <h4 class="text-primary mb-0">+012 345 6789</h4>
+                            <h4 class="text-primary mb-0">+22994513830</h4>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                        <form>
+                        <form action="" method="POST">
                             <div class="row g-3">
                                 <div class="col-xl-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Votre nom" style="height: 55px;">
+                                    <input type="text" name="nom" class="form-control bg-light border-0" placeholder="Votre nom" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Votre mail" style="height: 55px;">
+                                    <input type="email" name="email" class="form-control bg-light border-0" placeholder="Votre mail" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
+                                    <select class="form-select bg-light border-0" name="service" style="height: 55px;">
                                         <option selected>Choisissez le service</option>
                                         <option value="1">Développement Web</option>
                                         <option value="2">Développement Mobile</option>
@@ -170,10 +228,10 @@
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
+                                    <textarea class="form-control bg-light border-0" name="message" rows="3" placeholder="Message"></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-dark w-100 py-3" type="submit">Demande de Devis</button>
+                                    <button class="btn btn-dark w-100 py-3" name="valid" type="submit">Demande de Devis</button>
                                 </div>
                             </div>
                         </form>
