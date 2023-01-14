@@ -66,6 +66,10 @@ require('database.php');
                                     </div>
                                     <h4 class="mb-3"><?=$blog['title']  ?></h4>
                                     <a class="text-uppercase" href="/blog-detail.php?id_blog=<?=$blog['id_blog']  ?>">Read More <i class="bi bi-arrow-right"></i></a>
+                                    <p></p>
+
+                                    <a class="btn btn-danger mt-2" href="delete_blog.php?id_blog=<?=$blog['id_blog']?>">Supprimer</a>
+                                    
                                 </div>
                             </div>
                         </div>
