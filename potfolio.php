@@ -69,7 +69,7 @@
                                     </div>
                                     <h4 class="mb-3">Un site educatif</h4>
                                     <p>EasyAcess est un site qui vous permet de téléverser,telecharger des epreuves. Il vous permet egalement de vous divertir ou de poser une question ou un problème de l'ecole </p>
-                                    <a class="text-uppercase" href="easyacess.rf.gd">En Savoir Plus <i class="bi bi-arrow-right"></i></a>
+                                    <a class="text-uppercase" href="http://easyacess.rf.gd">En Savoir Plus <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
