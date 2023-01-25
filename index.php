@@ -1,3 +1,67 @@
+<?php
+session_start();
+require('admin/database.php');
+
+?>
+
+<?php
+if(isset($_POST['valid'])){
+    if(isset($_POST['nom'],$_POST['email'],$_POST['service'],$_POST['message'])AND !empty(trim($_POST['nom'])) AND !empty(trim($_POST['email']))  AND !empty(trim($_POST['service'])) AND !empty(trim($_POST['message'])) ){
+        $nom = htmlspecialchars($_POST['nom']);
+        $email = htmlspecialchars($_POST['email']);
+        $service = htmlspecialchars($_POST['service']);
+        $message = htmlspecialchars($_POST['message']);
+        ini_set('display_errors', 1);
+        error_reporting(E_ALL);
+        $from = "contact@modernetsoft.com";
+        $to = $_POST['email'];
+        $header = "MIME-Version: 1.0\r\n";
+        $header .= 'From:"Modernet soft"<contact@modernetsoft.com>' . "\n";
+        $header .= 'Content-Type:text/html; charset="utf-8"' . "\n";
+        $header .= 'Content-Transfer-Encoding: 8bit';
+        $subject = "[Modernet Soft ] Devis";
+        $message = '
+<html>
+  <body>
+      <div>
+      <h3>Nom</h3>
+      <p>'.$nom.'</p>
+      </div>
+      
+      <div>
+      <h3>Email</h3>
+      <p>'.$email.'</p>
+      </div>
+      
+      <div>
+      <h3>service</h3>
+      <p>'.$service.'</p>
+      </div>
+      
+      <div>
+      <h3>Message</h3>
+      <p>'.$message.'</p>
+      </div>
+      <div>
+       <h3>Modernet soft</h3>
+          <p>
+          Pour une generation numerique nouvelle
+          </p>
+      </div>
+  </body>
+</html>
+';
+       
+        mail($to, $subject, $message, $header);
+        
+            $to = "bienvenuacclombessi8@gmail.com";
+            mail($to, $subject, $message, $header);
+                $success = "Message envoyé avec success  ";
+    }else{
+        $error = "Veuillez remplir tous les champs";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +110,11 @@
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">Conceptions & Innovations</h5>
                             <h1 class="display-1 text-white mb-md-4 animated zoomIn">Solutions Créatives & Innovantes</h1>
                             <a href="quote.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Devis Gratuit</a>
+<<<<<<< HEAD
                             <a href="/contact.php" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contactez-nous</a>
+=======
+                            <a href="contact.php" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contactez-nous</a>
+>>>>>>> 0b256da03148d2a88fee775b28e153d9cc5590ae
                         </div>
                     </div>
                 </div>
@@ -166,10 +234,10 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Appelez-nous pour plus d'informations</h5>
-                            <h4 class="text-primary mb-0">+012 345 6789</h4>
+                            <h4 class="text-primary mb-0">+229 94513830</h4>
                         </div>
                     </div>
-                    <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Demandez un Devis gratuit</a>
+                    <a href="quote.php" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Demandez un Devis gratuit</a>
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
@@ -424,16 +492,16 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                        <form>
+                    <form action="" method="POST">
                             <div class="row g-3">
                                 <div class="col-xl-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Votre nom" style="height: 55px;">
+                                    <input type="text" name="nom" class="form-control bg-light border-0" placeholder="Votre nom" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Votre mail" style="height: 55px;">
+                                    <input type="email" name="email" class="form-control bg-light border-0" placeholder="Votre mail" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
+                                    <select class="form-select bg-light border-0" name="service" style="height: 55px;">
                                         <option selected>Choisissez le service</option>
                                         <option value="1">Développement Web</option>
                                         <option value="2">Développement Mobile</option>
@@ -442,10 +510,10 @@
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
+                                    <textarea class="form-control bg-light border-0" name="message" rows="3" placeholder="Message"></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-dark w-100 py-3" type="submit">Demande de Devis</button>
+                                    <button class="btn btn-dark w-100 py-3" name="valid" type="submit">Demande de Devis</button>
                                 </div>
                             </div>
                         </form>
@@ -457,66 +525,6 @@
     <!-- Quote End -->
 
 
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Avis Clients</h5>
-                <h1 class="mb-0">Ce Que Nos Clients Disent De Nos Services </h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-4.jpg" style="width: 60px; height: 60px;">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
 
   <?php include('team-container.php')  ?>
    
@@ -529,58 +537,39 @@
                 <h1 class="mb-0">Articles Récemment Publiés</h1>
             </div>
             <div class="row g-5">
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                    <div class="blog-item bg-light rounded overflow-hidden">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/blog-1.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex mb-3">
-                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+               
+                <?php
+                $blogs=$db->query('SELECT * FROM blogs LIMIT 3');
+                $nblogs=$blogs->rowCount();
+                if($nblogs>0){
+                    while($blog=$blogs->fetch()){
+                       ?>
+                        <div class="col-md-4 wow slideInUp" data-wow-delay="0.1s">
+                            <div class="blog-item bg-light rounded overflow-hidden">
+                                <div class="blog-img position-relative overflow-hidden">
+                                    <img class="img-fluid" src="admin/images/<?=$blog['image_descriptive']  ?>" alt="">
+                                     </div>
+                                <div class="p-4">
+                                    <div class="d-flex mb-3">
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>Modernet soft</small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i><?=$blog['createdAt']  ?></small>
+                                    </div>
+                                    <h4 class="mb-3"><?=$blog['title']  ?></h4>
+                                    <a class="text-uppercase" href="blog-detail.php?id_blog=<?=$blog['id_blog']  ?>">Lireplus <i class="bi bi-arrow-right"></i></a>
+                                </div>
                             </div>
-                            <h4 class="mb-3">How to build a website</h4>
-                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                    <div class="blog-item bg-light rounded overflow-hidden">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/blog-2.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex mb-3">
-                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                            </div>
-                            <h4 class="mb-3">How to build a website</h4>
-                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-                    <div class="blog-item bg-light rounded overflow-hidden">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/blog-3.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex mb-3">
-                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                            </div>
-                            <h4 class="mb-3">How to build a website</h4>
-                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
+                       
+                       <?php 
+                    }
+                }
+                ?>
+                <div class="col-md-4">
+                <a class="text-uppercase text-end mt-1" href="blog.php">Voir plus <i class="bi bi-arrow-right"></i></a>
+            
                 </div>
             </div>
+                                
         </div>
     </div>
     <!-- Blog Start -->

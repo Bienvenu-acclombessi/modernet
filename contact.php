@@ -1,9 +1,67 @@
+<?php
+if(isset($_POST['valid'])){
+    if(isset($_POST['nom'],$_POST['email'],$_POST['objet'],$_POST['message'])AND !empty(trim($_POST['nom'])) AND !empty(trim($_POST['email']))  AND !empty(trim($_POST['objet'])) AND !empty(trim($_POST['message'])) ){
+        $nom = htmlspecialchars($_POST['nom']);
+        $email = htmlspecialchars($_POST['email']);
+        $objet = htmlspecialchars($_POST['objet']);
+        $message = htmlspecialchars($_POST['message']);
+        ini_set('display_errors', 1);
+        error_reporting(E_ALL);
+        $from = "contact@modernetsoft.com";
+        $to = $_POST['email'];
+        $header = "MIME-Version: 1.0\r\n";
+        $header .= 'From:"Modernet soft"<contact@modernetsoft.com>' . "\n";
+        $header .= 'Content-Type:text/html; charset="utf-8"' . "\n";
+        $header .= 'Content-Transfer-Encoding: 8bit';
+        $subject = "[Modernet Soft ] Contact";
+        $message = '
+<html>
+  <body>
+      <div>
+      <h3>Nom</h3>
+      <p>'.$nom.'</p>
+      </div>
+      
+      <div>
+      <h3>Email</h3>
+      <p>'.$email.'</p>
+      </div>
+      
+      <div>
+      <h3>Objet</h3>
+      <p>'.$objet.'</p>
+      </div>
+      
+      <div>
+      <h3>Message</h3>
+      <p>'.$message.'</p>
+      </div>
+      <div>
+       <h3>Modernet soft</h3>
+          <p>
+          Pour une generation numerique nouvelle
+          </p>
+      </div>
+  </body>
+</html>
+';
+       
+        mail($to, $subject, $message, $header);
+        
+            $to = "bienvenuacclombessi8@gmail.com";
+            mail($to, $subject, $message, $header);
+                $success = "Message envoyé avec success  ";
+    }else{
+        $error = "Veuillez remplir tous les champs";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Moderneet Soft Contact</title>
+    <title>Modernet Soft Contact</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -74,7 +132,7 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Laissez-nous un mail</h5>
-                            <h4 class="text-primary mb-0">info@modernetsoft.com</h4>
+                            <h4 class="text-primary mb-0">contact@modernetsoft.com</h4>
                         </div>
                     </div>
                 </div>
@@ -92,22 +150,42 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-                    <form>
+                <?php
+if(isset($error)){
+    ?>
+    <div class="alert alert-danger">
+         <p class="text-center">
+            <?=$error?>
+         </p>
+    </div>
+    <?php
+}                ?>
+<?php
+if(isset($success)){
+    ?>
+    <div class="alert alert-success">
+         <p class="text-center">
+            <?=$success?>
+         </p>
+    </div>
+    <?php
+}                ?>
+                    <form action="" method="POST">
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <input type="text" class="form-control border-0 bg-light px-4" placeholder="Votre Nom" style="height: 55px;">
+                                <input type="text" class="form-control border-0 bg-light px-4" name="nom" placeholder="Votre Nom" style="height: 55px;">
                             </div>
                             <div class="col-md-6">
-                                <input type="email" class="form-control border-0 bg-light px-4" placeholder="Votre Email" style="height: 55px;">
+                                <input type="email" class="form-control border-0 bg-light px-4" name="email" placeholder="Votre Email" style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control border-0 bg-light px-4" placeholder="Objet" style="height: 55px;">
+                                <input type="text" class="form-control border-0 bg-light px-4" name="objet" placeholder="Objet" style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Message"></textarea>
+                                <textarea class="form-control border-0 bg-light px-4 py-3" name="message" rows="4" placeholder="Message"></textarea>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Envoyer le Message</button>
+                                <button class="btn btn-primary w-100 py-3" name="valid" type="submit">Envoyer le Message</button>
                             </div>
                         </div>
                     </form>
@@ -124,25 +202,7 @@
     <!-- Contact End -->
 
 
-    <!-- Vendor Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5 mb-5">
-            <div class="bg-white">
-                <div class="owl-carousel vendor-carousel">
-                    <img src="img/vendor-1.jpg" alt="">
-                    <img src="img/vendor-2.jpg" alt="">
-                    <img src="img/vendor-3.jpg" alt="">
-                    <img src="img/vendor-4.jpg" alt="">
-                    <img src="img/vendor-5.jpg" alt="">
-                    <img src="img/vendor-6.jpg" alt="">
-                    <img src="img/vendor-7.jpg" alt="">
-                    <img src="img/vendor-8.jpg" alt="">
-                    <img src="img/vendor-9.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Vendor End -->
+   
     
 
     <?php include('footer.php') ?>

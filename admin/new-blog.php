@@ -1,5 +1,6 @@
 <?php
 session_start();
+require('security.php');
 require('database.php');
 if(isset($_POST['valid'])){
     if(isset($_POST['title'],$_POST['description']) AND !empty(trim($_POST['title'])) AND !empty(trim($_POST['description']))){
@@ -90,7 +91,7 @@ if(isset($success)){
     <?php
 }                ?>
                    <h4 class="card-title">Nouveau blog</h4>
-                  <form class="forms-sample" id="form_blog"  action="" method="POST" enctype="multipart/form-data">
+                  <form class="forms-sample" id=""  action="" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                       <label for="exampleInputUsername1">Titre du blog(h1) </label>
                       <input type="text" required class="form-control" name="title" id="exampleInputUsername1" placeholder="Titre du blog">
@@ -105,14 +106,11 @@ if(isset($success)){
                         </span>
                       </div>
                     </div>
+                    
                     <div class="form-group">
-                      <label for="exampleTextarea1">Corps de votre rédaction</label>
-                       <div class="summernote">
-
-                       </div>  
-                    </div>
-                    <div class="form-group">
-                     <textarea  class="d-none form-control" id="exampleTextarea1" name="description" rows="4"></textarea>
+                    <label for="exampleTextarea1">Corps de votre rédaction</label>
+                     
+                     <textarea placeholder="Votre texte ici"  class="form-control" id="exampleTextarea1" name="description" rows="4"></textarea>
                     </div>
                     <button type="submit" name="valid" class="btn btn-primary mr-2">Soumettre</button>
                   </form>
