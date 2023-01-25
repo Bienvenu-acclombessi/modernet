@@ -1,6 +1,6 @@
 <?php 
 try{
- $db=new PDO('mysql:host=localhost;dbname=modernet;charset=utf8','root','');
+ $db=new PDO('mysql:host=localhost;dbname=modernet;charset=utf8','root','root');
   //$db=new PDO('mysql:host=localhost;dbname=u361762779_BRINKFinance;charset=utf8','u361762779_BRINKFinance','Abdoulayeezechiel1#');
 
 }
