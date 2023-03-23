@@ -9,7 +9,7 @@
             <div class="col-lg-3 wow slideInUp" data-wow-delay="0.3s">
                     <div class="team-item bg-light rounded overflow-hidden">
                         <div class="team-img position-relative overflow-hidden">
-                            <div class="w-100 overflow-hidden" style="height:250px"><img class="img-fluid w-100" src="img/stan1.png" alt=""></div>
+                            <div class="w-100 overflow-hidden" style="height:250px"><img class="img-fluid w-100" src="img/avatar_equipe.png" alt=""></div>
                             <div class="team-social">
                                 <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
                                 <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>

@@ -110,11 +110,7 @@ if(isset($_POST['valid'])){
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">Conceptions & Innovations</h5>
                             <h1 class="display-1 text-white mb-md-4 animated zoomIn">Solutions Créatives & Innovantes</h1>
                             <a href="quote.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Devis Gratuit</a>
-<<<<<<< HEAD
                             <a href="/contact.php" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contactez-nous</a>
-=======
-                            <a href="contact.php" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contactez-nous</a>
->>>>>>> 0b256da03148d2a88fee775b28e153d9cc5590ae
                         </div>
                     </div>
                 </div>
