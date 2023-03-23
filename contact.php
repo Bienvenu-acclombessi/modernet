@@ -170,7 +170,7 @@ if(isset($success)){
     </div>
     <?php
 }                ?>
-                    <form action="" method="POST">
+                    <form action="" method="POST" id="demo-form">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <input type="text" class="form-control border-0 bg-light px-4" name="nom" placeholder="Votre Nom" style="height: 55px;">
@@ -185,7 +185,11 @@ if(isset($success)){
                                 <textarea class="form-control border-0 bg-light px-4 py-3" name="message" rows="4" placeholder="Message"></textarea>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" name="valid" type="submit">Envoyer le Message</button>
+                                <button class="g-recaptcha btn btn-primary w-100 py-3" type="submit"
+                                    
+                                    data-sitekey="6LeVAzQkAAAAAPq_XHcIeL56LMOzHvjzdTKrzzPN" 
+                                    data-callback='onSubmit' 
+                                    data-action='submit' name="valid" type="submit">Envoyer le Message</button>
                             </div>
                         </div>
                     </form>
@@ -206,8 +210,13 @@ if(isset($success)){
     
 
     <?php include('footer.php') ?>
-
+    <script>
+        function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+    }
+    </script>
     <!-- JavaScript Libraries -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
