@@ -51,7 +51,7 @@
                         </div>
                     </div> -->
                     <a href="/potfolio.php" class="nav-item nav-link">Réalisations</a>
-                    <a href="/price.php" class="nav-item nav-link">Devis</a>
+                    <!-- <a href="/price.php" class="nav-item nav-link">Devis</a> -->
                     <a href="/team.php" class="nav-item nav-link">Équipe</a>
                     
                     <!-- <div class="nav-item dropdown">
