@@ -169,7 +169,7 @@ if(isset($_POST['valid'])){
                         </div>
                         <div class="ps-4">
                             <h5 class="text-white mb-0">Avis des Clients</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">12345</h1>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">10</h1>
                         </div>
                     </div>
                 </div>
@@ -180,7 +180,7 @@ if(isset($_POST['valid'])){
                         </div>
                         <div class="ps-4">
                             <h5 class="text-primary mb-0">Projets Réalisés</h5>
-                            <h1 class="mb-0" data-toggle="counter-up">12345</h1>
+                            <h1 class="mb-0" data-toggle="counter-up">15</h1>
                         </div>
                     </div>
                 </div>
@@ -482,7 +482,7 @@ if(isset($_POST['valid'])){
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Appelez-nous</h5>
-                            <h4 class="text-primary mb-0">+012 345 6789</h4>
+                            <h4 class="text-primary mb-0">+22994513830</h4>
                         </div>
                     </div>
                 </div>
