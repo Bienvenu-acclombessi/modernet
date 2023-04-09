@@ -8,7 +8,7 @@ if(isset($_POST['valid'])){
         ini_set('display_errors', 1);
         error_reporting(E_ALL);
         $from = "contact@modernetsoft.com";
-        $to = $_POST['email'];
+        $to = "bienvenuacclombessi8@gmail.com";
         $header = "MIME-Version: 1.0\r\n";
         $header .= 'From:"Modernet soft"<contact@modernetsoft.com>' . "\n";
         $header .= 'Content-Type:text/html; charset="utf-8"' . "\n";
