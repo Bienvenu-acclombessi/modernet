@@ -55,8 +55,7 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Espoir TONOU</h4>
-                            <p class=" m-0">Développeur Web & Mobile</p>                
-                            <p class=" m-0">Graphiste</p>
+                            <p class=" m-0">Développeur Web & Mobile</p>  
                         </div>
                     </div>
                 </div>
@@ -73,8 +72,25 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary"> Nabil SOUMANOU</h4>
-                            <p class=" m-0">Développeur Web & Mobile</p>                           
-                            <p class=" m-0"> Développeur UI/UX</p>
+                            <p class=" m-0">Développeur Web & Mobile</p> 
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 wow slideInUp" data-wow-delay="0.9s">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="team-img position-relative overflow-hidden">
+                           <div class="w-100 overflow-hidden" style="height:250px"><img class="img-fluid w-100" src="img/avatar_equipe.png" alt=""></div> 
+                            <div class="team-social">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h4 class="text-primary"> Ridiwan ELEMAN</h4>
+                            <p class=" m-0">Graphiste UI/UX</p>
                            
                         </div>
                     </div>

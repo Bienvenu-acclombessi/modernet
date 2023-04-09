@@ -9,9 +9,9 @@
                             <h1 class="m-0 text-white">Modernet Soft</h1>
                         </a>
                         <p class="mt-3 mb-4">Les Meilleures solutions de dévoppement avec plusieurs années d'expérience.</p>
-                        <form action="">
+                        <form action="newlistener.php" method="post">
                             <div class="input-group">
-                                <input type="text" class="form-control border-white p-3" placeholder="Votre Email">
+                                <input name="email" required type="text" class="form-control border-white p-3" placeholder="Votre Email">
                                 <button class="btn btn-dark">S'abonner</button>
                             </div>
                         </form>

@@ -40,9 +40,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="/index.php" class="nav-item nav-link">Accueil</a>
+                    <a href="/" class="nav-item nav-link">Accueil</a>
                     
-                    <a href="/service.php" class="nav-item nav-link">Services</a>
+                    <a href="/service" class="nav-item nav-link">Services</a>
                     <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
                         <div class="dropdown-menu m-0">
@@ -50,9 +50,9 @@
                             <a href="detail.html" class="dropdown-item">Blog Detail</a>
                         </div>
                     </div> -->
-                    <a href="/potfolio.php" class="nav-item nav-link">Réalisations</a>
+                    <a href="/potfolio" class="nav-item nav-link">Réalisations</a>
                     <!-- <a href="/price.php" class="nav-item nav-link">Devis</a> -->
-                    <a href="/team.php" class="nav-item nav-link">Équipe</a>
+                    <a href="/team" class="nav-item nav-link">Équipe</a>
                     
                     <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -64,8 +64,8 @@
                             <a href="quote.html" class="dropdown-item">Free Quote</a>
                         </div>
                     </div> -->
-                    <a href="/about.php" class="nav-item nav-link">À propos</a>
-                    <a href="/contact.php" class="nav-item nav-link">Contact</a>
+                    <a href="/about" class="nav-item nav-link">À propos</a>
+                    <a href="/contact" class="nav-item nav-link">Contact</a>
                 </div>
                 <!-- <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> -->
             </div>
