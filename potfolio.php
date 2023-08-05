@@ -61,7 +61,7 @@
                             <div class="blog-item bg-light rounded overflow-hidden">
                                 <div class="blog-img position-relative overflow-hidden">
                                 <div class="w-100 overflow-hidden" style="min-height:250px"> <img class="img-fluid w-100" src="img/easyaccess.png" alt=""></div>
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">EasyAccess</a>
+                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="https://easyaccess.modernetsoft.com">EasyAccess</a>
                                 </div>
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
@@ -69,10 +69,49 @@
                                     </div>
                                     <h4 class="mb-3">Un site educatif</h4>
                                     <p>EasyAcess est un site qui vous permet de téléverser,telecharger des epreuves. Il vous permet egalement de vous divertir ou de poser une question ou un problème de l'ecole </p>
-                                    <a class="text-uppercase" href="http://easyacess.rf.gd">En Savoir Plus <i class="bi bi-arrow-right"></i></a>
+                                    <a class="text-uppercase" href="https://easyaccess.modernetsoft.com">En Savoir Plus <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- somin application -->
+                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
+                            <div class="blog-item bg-light rounded overflow-hidden">
+                                <div class="blog-img position-relative overflow-hidden">
+                                <div class="w-100 overflow-hidden" style="min-height:250px"> <img class="img-fluid w-100" src="img/somin.png" alt=""></div>
+                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="https://somin.pro">Somin</a>
+                                </div>
+                                <div class="p-4">
+                                    <div class="d-flex mb-3">
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>Somin</small>
+                                    </div>
+                                    <h4 class="mb-3">Un site de vote</h4>
+                                    <p>Somin est la plateforme d'organisation de votes en ligne qui offre une solution complète et sécurisée pour faciliter vos processus de vote.</p>
+                                    <a class="text-uppercase" href="https://somin.pro">En Savoir Plus <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- fin somin application -->
+                        <!-- somin application -->
+                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
+                            <div class="blog-item bg-light rounded overflow-hidden">
+                                <div class="blog-img position-relative overflow-hidden">
+                                <div class="w-100 overflow-hidden" style="min-height:250px"> <img class="img-fluid w-100" src="img/bchat.png" alt=""></div>
+                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="https://modernetsoft.com/archives/bchat.apk">Bchat</a>
+                                </div>
+                                <div class="p-4">
+                                    <div class="d-flex mb-3">
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>Bchat</small>
+                                    </div>
+                                    <h4 class="mb-3">Une application mobile chatbot</h4>
+                                    <p>Bchat  est une application mobile basée sur IA qui repond à tes questions .</p>
+                                    <a class="text-uppercase" href="https://modernetsoft.com/archives/bchat.apk">Télécharger <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- fin somin application -->
                        
                     </div>
                 </div>
