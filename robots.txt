@@ -1,0 +1,4 @@
+Sitemap: https://modernetsoft.com/sitemap.xml
+User-Agent: *
+Disallow: /admin/*
+Disallow: /scripts/*
